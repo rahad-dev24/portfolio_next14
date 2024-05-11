@@ -13,7 +13,7 @@ const Btn = ({
   return (
     <Link href={pathURL}>
       <button
-        className={`transition-all ease-in text-white border py-1 px-1 ${className}`}
+        className={`transition-all ease-in text-white border p-1 ${className}`}
       >
         {button_text}
       </button>
