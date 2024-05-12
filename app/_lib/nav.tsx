@@ -25,7 +25,10 @@ const Nav = () => {
           />
         </Link>
 
-        <li className="text-2xl mr-auto md:mx-auto">Rahad.</li>
+        <li className="text-2xl mr-auto md:mx-auto  ">
+          Rahad
+          <p className="w-3 h-[19px] mt-[4px] bg-white  float-right  animate-pulse "></p>
+        </li>
         <Btn pathURL="/contact" button_text="Projects" className={button_css} />
         <Btn pathURL="/projects" button_text="Guides" className={button_css} />
         <Btn pathURL="/about" button_text="About" className={button_css} />

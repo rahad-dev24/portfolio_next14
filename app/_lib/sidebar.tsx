@@ -1,20 +1,57 @@
+import Btn from "@/components/Btn";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import LogoButton from "./logo-button";
 
 const Sidebar = () => {
+  const links = [
+    {
+      imageSrcBlack: "/github.svg",
+      imageSrcWhite: "/github-white.svg",
+      imageAlt: "github",
+      buttonText: "Github",
+      pathURL: "https://github.com/rahad-dev24",
+    },
+    {
+      imageSrcBlack: "/linkedin.svg",
+      imageSrcWhite: "/linkedin-white.svg",
+      imageAlt: "linkedin",
+      buttonText: "LinkedIn",
+      pathURL: "https://www.linkedin.com/in/rahad-dev24/",
+    },
+    {
+      imageSrcBlack: "/facebook.svg",
+      imageSrcWhite: "/facebook-white.svg",
+      imageAlt: "facebook",
+      buttonText: "Facebook",
+      pathURL: "https://www.facebook.com/rahad.dev24/",
+    },
+    {
+      imageSrcBlack: "/download.svg",
+      imageSrcWhite: "/download-white.svg",
+      imageAlt: "download",
+      buttonText: "Download CV",
+      pathURL: "/CV-Faisal_Ahamed_Rahad.pdf",
+    },
+  ];
+
   return (
     <aside className="hidden lg:block lg:w-72 xl:w-80 h-screen  bg-gray-900 p-4 fixed top-14 left-0">
-      <article className="flex flex-col gap-4 items-center ">
-        <Link href="/" className="group mt-auto">
+      <article className="flex flex-col gap-4 items-center mt-8 ">
+        <Link
+          href="/"
+          className="group mt-auto border border-gray-50 hover:border-white rounded"
+        >
           <img
             src="/white.png"
             alt="logo"
-            className="group-hover:hidden rounded p-1 h-auto w-40 cursor-default"
+            className="group-hover:hidden  p-1 h-auto w-40 cursor-default"
           />
           <img
             src="/black.png"
             alt="logo"
-            className="hidden group-hover:block group-hover:bg-white transition-all ease-in rounded p-1 h-auto w-40 cursor-default"
+            className="hidden group-hover:block group-hover:bg-white transition-all ease-in  p-1 h-auto w-40 cursor-default"
           />
         </Link>
 
@@ -42,10 +79,15 @@ const Sidebar = () => {
             <p className="font-thin">Savar, Dhaka - 1349.</p>
           </div>
         </address>
-        <Link href="/">GitHub</Link>
-        <Link href="/about">Linkedin</Link>
-        <Link href="/about">Facebook</Link>
-        <Link href="/about">Download CV</Link>
+        {links.map((index) => (
+          <LogoButton
+            imageSrcWhite={index.imageSrcWhite}
+            imageSrcBlack={index.imageSrcBlack}
+            imageAlt={index.imageAlt}
+            buttonText={index.buttonText}
+            pathURL={index.pathURL}
+          />
+        ))}
       </article>
     </aside>
   );
