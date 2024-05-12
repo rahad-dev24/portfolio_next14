@@ -7,6 +7,7 @@ const LogoButton = ({
   imageSrcBlack,
   imageAlt,
   buttonText,
+  indexKey,
   pathURL,
 }: {
   imageSrcWhite: string;
@@ -14,11 +15,13 @@ const LogoButton = ({
   imageAlt: string;
   buttonText: string;
   pathURL: string;
+  indexKey: string;
 }) => {
   return (
     <Link
       href={pathURL}
       className="gap-2 flex p-2 divide-gray-500 text-lg items-center justify-start w-full transition-all ease-in hover:text-black font-bold rounded hover:bg-white group"
+      key={indexKey}
     >
       <Image
         src={imageSrcBlack}

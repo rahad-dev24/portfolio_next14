@@ -41,7 +41,7 @@ const Sidebar = () => {
       <article className="flex flex-col gap-4 items-center mt-8 ">
         <Link
           href="/"
-          className="group mt-auto border border-gray-50 hover:border-white rounded"
+          className="group my-4 border border-gray-50 hover:border-white rounded"
         >
           <img
             src="/white.png"
@@ -55,7 +55,7 @@ const Sidebar = () => {
           />
         </Link>
 
-        <p className="text-xl xl:text-2xl font-bold font-serif ">
+        <p className="text-xl my-5 xl:text-2xl font-bold font-serif ">
           Faisal Ahamed Rahad
         </p>
         <Link
@@ -71,7 +71,7 @@ const Sidebar = () => {
           Phone: <span className="font-thin">+880 1319-639009</span>
         </Link>
 
-        <address className="text-sm text-left w-full xl:text-base">
+        <address className="text-sm mb-6 text-left w-full xl:text-base">
           <span className="font-bold">Address: </span>
           <div className="float-right text-left mr-3 xl:mr-3">
             <p className="font-thin">Uttar Gazirchat,</p>
@@ -86,6 +86,7 @@ const Sidebar = () => {
             imageAlt={index.imageAlt}
             buttonText={index.buttonText}
             pathURL={index.pathURL}
+            indexKey={index.buttonText}
           />
         ))}
       </article>
