@@ -25,12 +25,13 @@ const Menu = () => {
               flex
               flex-col
               absolute
-              top-14
+              top-[3.70rem]
               right-4
               w-[40%]
               divide-y
-              border
-              rounded
+             border 
+              rounded-b
+              
               "
           >
             <Btn
@@ -46,7 +47,7 @@ const Menu = () => {
             <Btn
               pathURL="/about"
               button_text="About"
-              className={menu_list_css}
+              className={menu_list_css + " rounded-b "}
             />
           </div>
         </div>

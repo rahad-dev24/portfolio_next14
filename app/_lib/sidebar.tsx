@@ -3,39 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import LogoButton from "./logo-button";
+import { links } from "@/public/links";
 
 const Sidebar = () => {
-  const links = [
-    {
-      imageSrcBlack: "/github.svg",
-      imageSrcWhite: "/github-white.svg",
-      imageAlt: "github",
-      buttonText: "Github",
-      pathURL: "https://github.com/rahad-dev24",
-    },
-    {
-      imageSrcBlack: "/linkedin.svg",
-      imageSrcWhite: "/linkedin-white.svg",
-      imageAlt: "linkedin",
-      buttonText: "LinkedIn",
-      pathURL: "https://www.linkedin.com/in/rahad-dev24/",
-    },
-    {
-      imageSrcBlack: "/facebook.svg",
-      imageSrcWhite: "/facebook-white.svg",
-      imageAlt: "facebook",
-      buttonText: "Facebook",
-      pathURL: "https://www.facebook.com/rahad.dev24/",
-    },
-    {
-      imageSrcBlack: "/download.svg",
-      imageSrcWhite: "/download-white.svg",
-      imageAlt: "download",
-      buttonText: "Download CV",
-      pathURL: "/CV-Faisal_Ahamed_Rahad.pdf",
-    },
-  ];
-
   return (
     <aside className="hidden lg:block lg:w-72 xl:w-80 h-screen  bg-gray-900 p-4 fixed top-14 left-0">
       <article className="flex flex-col gap-4 items-center mt-8 ">
@@ -86,7 +56,7 @@ const Sidebar = () => {
             imageAlt={index.imageAlt}
             buttonText={index.buttonText}
             pathURL={index.pathURL}
-            indexKey={index.buttonText}
+            key={index.buttonText}
           />
         ))}
       </article>

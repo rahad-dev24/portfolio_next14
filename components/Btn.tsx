@@ -11,9 +11,12 @@ const Btn = ({
   className: string;
 }) => {
   return (
-    <Link href={pathURL}>
+    <Link
+      href={pathURL}
+      className=" bg-black bg-opacity-80 backdrop-blur rounded-b "
+    >
       <button
-        className={`transition-all ease-in text-white border p-1 ${className}`}
+        className={`transition-all ease-in text-lg text-white ${className}`}
       >
         {button_text}
       </button>

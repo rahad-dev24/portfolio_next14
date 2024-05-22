@@ -7,7 +7,6 @@ const LogoButton = ({
   imageSrcBlack,
   imageAlt,
   buttonText,
-  indexKey,
   pathURL,
 }: {
   imageSrcWhite: string;
@@ -15,20 +14,20 @@ const LogoButton = ({
   imageAlt: string;
   buttonText: string;
   pathURL: string;
-  indexKey: string;
 }) => {
   return (
     <Link
       href={pathURL}
+      target="_blank"
+      rel="noopener noreferrer"
       className="gap-2 flex p-2 divide-gray-500 text-lg items-center justify-start w-full transition-all ease-in hover:text-black font-bold rounded hover:bg-white group"
-      key={indexKey}
     >
       <Image
         src={imageSrcBlack}
         alt={imageAlt}
         width="30"
         height="30"
-        className="ml-[25%] hidden group-hover:block"
+        className="ml-[25%] hidden group-hover:block animate-wiggle"
       />
       <Image
         src={imageSrcWhite}

@@ -4,7 +4,7 @@ import Btn from "@/components/Btn";
 import Menu from "@/components/menu";
 const Nav = () => {
   const button_css: string =
-    " hidden lg:block hover:bg-[#FFFFFF] hover:text-black rounded ml-1 hover:text-bold p-2";
+    " rounded hidden lg:block  hover:bg-[#FFFFFF] hover:text-black  ml-2 py-1 px-2 ";
   return (
     <nav className="h-full">
       <ul className="flex flex-wrap content-center items-center h-full px-4">
@@ -25,9 +25,9 @@ const Nav = () => {
           />
         </Link>
 
-        <li className="text-2xl mr-auto md:mx-auto  ">
-          Rahad
-          <p className="w-3 h-[19px] mt-[4px] bg-white  float-right  animate-pulse "></p>
+        <li className="text-2xl mr-auto ">
+          Rahad{" "}
+          <p className="w-3 h-[1.2rem] mt-[0.35rem] md:mt-[0.25rem]  ml-[2px] bg-white float-right animate-pulse "></p>
         </li>
         <Btn pathURL="/contact" button_text="Projects" className={button_css} />
         <Btn pathURL="/projects" button_text="Guides" className={button_css} />

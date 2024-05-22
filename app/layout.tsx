@@ -15,12 +15,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="m-0 p-0 bg-[#0C0C0D] text-white font-mono ">
-        <header className="backdrop-blur backdrop-contrast-125 sticky top-0 h-14 ">
+        <header className="backdrop-blur backdrop-contrast-125 sticky top-0 h-14 border-b z-10 ">
           <Nav />
         </header>{" "}
         <Sidebar />
         {children}
-        <footer className="backdrop-blur backdrop-contrast-125 sticky top-0 h-14 ">
+        <footer className="backdrop-blur backdrop-contrast-125 sticky top-0 h-14 border-t ">
           footer
         </footer>
       </body>
