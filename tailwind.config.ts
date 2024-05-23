@@ -15,12 +15,12 @@ const config: Config = {
       },
       animation: {
         wiggle: "wiggle 1s ease-in-out infinite",
-        banner: " banner 15s linear infinite ",
+        banner: " banner 30s linear infinite ",
       },
       keyframes: {
         wiggle: {
-          "0%, 100%": { transform: "rotate(-20deg)" },
-          "50%": { transform: "rotate(20deg)" },
+          "0%, 100%": { transform: "rotate(-15deg)" },
+          "50%": { transform: "rotate(15deg)" },
         },
         banner: {
           "0%": { transform: "translateX(0%)" },
