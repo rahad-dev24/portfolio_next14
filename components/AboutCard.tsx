@@ -31,9 +31,9 @@ const edu: edu[] = [
   },
 ];
 
-const AboutCard = () => {
+const AboutCard = ({ className }: { className?: string }) => {
   return (
-    <div className="mt-20 md:mt-36">
+    <div className={`${className}`}>
       <h2 className="text-3xl font-bold text-center pb-10">About Me</h2>
       <p className="lg:text-center text-justify pb-10">
         Full-Stack developer with 2+ years of experience in web development with

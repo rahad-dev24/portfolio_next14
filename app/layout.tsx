@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "./_lib/nav";
-import Sidebar from "./_lib/sidebar";
+import Link from "next/link";
+
 export const metadata: Metadata = {
   title: "Portfolio - Faisal Ahamed Rahad",
   description: "Portfolio with Next.js 14 and Tailwind CSS",
@@ -13,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth no-scrollbar">
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
       </head>
@@ -21,10 +22,11 @@ export default function RootLayout({
         <header className="backdrop-blur backdrop-contrast-125 sticky top-0 h-14 border-b z-10 ">
           <Nav />
         </header>{" "}
-        <Sidebar />
         {children}
-        <footer className="backdrop-blur backdrop-contrast-125 sticky top-0 h-14 border-t ">
-          footer
+        <footer className="backdrop-blur backdrop-contrast-125 sticky top-0 h-14 border-t p-1.5 flex flex-row items-center justify-end pr-8">
+          <p>
+            © 2024 <span className="animate-pulse">Faisal Ahamed Rahad</span>
+          </p>
         </footer>
       </body>
     </html>

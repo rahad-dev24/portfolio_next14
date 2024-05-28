@@ -13,13 +13,9 @@ const Btn = ({
   return (
     <Link
       href={pathURL}
-      className=" bg-black bg-opacity-80 backdrop-blur rounded-b "
+      className={`transition-all ease-in text-lg text-white bg-opacity-80 backdrop-blur ${className}`}
     >
-      <button
-        className={`transition-all ease-in text-lg text-white ${className}`}
-      >
-        {button_text}
-      </button>
+      <button>{button_text}</button>
     </Link>
   );
 };

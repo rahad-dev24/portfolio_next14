@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const ProjectCard = ({
+import { projects } from "@/public/projects/projects";
+const Pcards = ({
   name,
   img,
   live,
@@ -13,7 +13,7 @@ const ProjectCard = ({
   desc?: string;
 }) => {
   return (
-    <div className="border border-gray-600 hover:border-gray-50 rounded p-2 cursor-default">
+    <div className="border border-gray-600 hover:border-gray-50 rounded p-2 cursor-default  ">
       <Link
         href={live}
         rel="noopener noreferrer"
@@ -36,6 +36,29 @@ const ProjectCard = ({
       </Link>
       <h1 className="text-xl font-bold">{name}</h1>
       <p className="text-sm">{desc}</p>
+    </div>
+  );
+};
+const ProjectCard = ({ className }: { className?: string }) => {
+  return (
+    <div
+      className={`md:w-[80%] lg:w-[55%] m-auto overflow-hidden px-0.5 py-8 ${className}`}
+    >
+      <h2 className="text-3xl font-bold mb-8 text-center ">Projects</h2>
+      <article className="grid grid-flow-row gap-4 ">
+        {projects.map((index) => {
+          return (
+            <section key={index.name}>
+              <Pcards
+                name={index.name}
+                img={index.img}
+                live={index.live}
+                desc={index.desc}
+              />
+            </section>
+          );
+        })}
+      </article>
     </div>
   );
 };

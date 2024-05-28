@@ -1,14 +1,28 @@
-import Btn from "@/components/Btn";
-import Image from "next/image";
+"use client";
 import Link from "next/link";
 import React from "react";
 import LogoButton from "./logo-button";
 import { links } from "@/public/links";
+import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/24/solid";
 
 const Sidebar = () => {
-  return (
-    <aside className="hidden lg:block lg:w-72 xl:w-80 h-screen  bg-gray-900 p-4 fixed top-14 left-0">
-      <article className="flex flex-col gap-4 items-center mt-8 ">
+  const [openSideBar, srtOpenSideBar] = React.useState(false);
+  return !openSideBar ? (
+    <ChevronRightIcon
+      onClick={() => srtOpenSideBar(!openSideBar)}
+      className={
+        `hidden lg:block w-8 h-8 m-4 border rounded fixed cursor-default border-gray-400 hover:border-gray-50 text-gray-400 hover:text-gray-50 animate-pulse ` +
+        (openSideBar ? "hidden" : "block")
+      }
+    />
+  ) : (
+    <aside className="lg:w-72 xl:w-80 hidden lg:block ">
+      <article className="flex flex-col gap-4 items-center fixed left-0 bg-gray-900 p-4 h-screen">
+        <ChevronLeftIcon
+          onClick={() => srtOpenSideBar(!openSideBar)}
+          className="w-8 place-self-end h-8 border rounded cursor-pointer border-gray-400 hover:border-gray-50 text-gray-400 hover:text-gray-50 animate-pulse"
+        />
+
         <Link
           href="/"
           className="group my-4 border border-gray-50 hover:border-white rounded"

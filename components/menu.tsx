@@ -7,7 +7,7 @@ import Btn from "./Btn";
 const Menu = () => {
   const [open, setOpen] = React.useState(true);
   const menu_list_css =
-    " hover:text-black hover:bg-white border-0 w-full py-5  ";
+    " hover:text-black hover:bg-white border-0 w-full p-5 bg-black  ";
   return (
     <div
       className=" lg:hidden"
@@ -35,12 +35,12 @@ const Menu = () => {
               "
           >
             <Btn
-              pathURL="/contact"
+              pathURL="/projects"
               button_text="Projects"
               className={menu_list_css}
             />
             <Btn
-              pathURL="/projects"
+              pathURL="/guides"
               button_text="Guides"
               className={menu_list_css}
             />
