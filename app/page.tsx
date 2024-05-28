@@ -8,7 +8,7 @@ import GuideCard from "@/components/GuideCard";
 
 export default function Home() {
   return (
-    <main className=" min-h-screen  flex flex-row">
+    <main className=" min-h-screen  flex flex-row mb-32">
       <Sidebar />
       <article className="p-4 grid grid-flow-row md:w-[85%] lg:w-[65%] m-auto">
         <section className="  min-h-screen text-center overflow-hidden pt-6 md:pt-16  ">
@@ -31,7 +31,7 @@ export default function Home() {
             Iron-session, GraphQL, Prisma, PostgreSQL, Tailwind CSS etc.
           </p>
           <p className="pt-4 md:py-4 text-center">
-            Explore my portfolio and see some of my projects.section:GraphQL
+            Explore my portfolio and see some of my projects.
           </p>
           <section className="py-5 md:py-10">
             <SocialLinks />
@@ -42,7 +42,7 @@ export default function Home() {
           <Techs />
         </section>
         <section>
-          <ProjectCard className="md:w-full lg:w-4/5" />
+          <ProjectCard className="md:w-full lg:w-5/6" />
         </section>
         <section>
           <AboutCard className="mt-10 md:mt-24" />
@@ -50,7 +50,6 @@ export default function Home() {
         <section>
           <GuideCard className="mt-10 md:mt-24" />
         </section>
-        <section>Hello</section>
       </article>
     </main>
   );
