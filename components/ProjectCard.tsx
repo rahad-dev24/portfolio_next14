@@ -6,11 +6,17 @@ const Pcards = ({
   img,
   live,
   desc,
+  imgAlt,
+  techStack,
+  github,
 }: {
   name: string;
   img: string;
   live: string;
   desc?: string;
+  imgAlt?: string;
+  techStack?: string;
+  github?: string;
 }) => {
   return (
     <div className="border border-gray-600 hover:border-gray-50 rounded p-2 cursor-default  ">
@@ -20,14 +26,14 @@ const Pcards = ({
         target="_blank"
         className=" group"
       >
-        <div className="relative mb-2">
+        <div className="relative mb-2 m-auto">
           <Image
             src={img}
-            alt="logo"
-            width="200"
-            height="200"
-            className="bg-white w-full h-full group-hover:blur-sm
-          rounded-md transition ease-in group-hover:opacity-30"
+            alt={imgAlt}
+            width="700"
+            height="700"
+            className="bg-white w-[700px] h-[700px] group-hover:blur-sm
+          rounded-md transition ease-in group-hover:opacity-30 m-auto "
           />
           <p className="absolute hidden group-hover:block   translate-y-[-50%] w-full h-full  text-center text-white">
             {live}
@@ -35,14 +41,25 @@ const Pcards = ({
         </div>
       </Link>
       <h1 className="text-xl font-bold">{name}</h1>
-      <p className="text-sm">{desc}</p>
+      <p className="text-sm my-1">{desc}</p>
+      {github ? (
+        <p className="text-sm my-1">
+          GitHub:{" "}
+          <Link href={github} rel="noopener noreferrer" target="_blank">
+            {github}
+          </Link>
+        </p>
+      ) : null}
+      {techStack ? (
+        <p className="text-sm my-1">Tech Stack: {techStack}</p>
+      ) : null}
     </div>
   );
 };
 const ProjectCard = ({ className }: { className?: string }) => {
   return (
     <div
-      className={`md:w-[80%] lg:w-[55%] m-auto overflow-hidden px-0.5 py-8 ${className}`}
+      className={`md:w-[80%]  m-auto overflow-hidden px-0.5 py-8 ${className}`}
     >
       <h2 className="text-3xl font-bold mb-8 text-center ">Projects</h2>
       <article className="grid grid-flow-row gap-4 ">
@@ -54,6 +71,9 @@ const ProjectCard = ({ className }: { className?: string }) => {
                 img={index.img}
                 live={index.live}
                 desc={index.desc}
+                imgAlt={index.imgAlt}
+                techStack={index.techStack}
+                github={index.github}
               />
             </section>
           );

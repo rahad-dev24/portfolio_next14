@@ -38,7 +38,7 @@ const AboutCard = ({ className }: { className?: string }) => {
       <p className="lg:text-center text-justify pb-10">
         Full-Stack developer with 2+ years of experience in web development with
         Node.js, Next.js, Apollo server, React Query, PostgreSQL, GraphQL,
-        Tailwind CSS, TypeScript, Prisma, Session authentication and
+        Tailwind CSS, TypeScript, Prisma ORM, Docker, Session authentication and
         authorization, Redis and Nginx. I’ve done many projects and side
         projects and made myself comfortable with large scale project
         structures.

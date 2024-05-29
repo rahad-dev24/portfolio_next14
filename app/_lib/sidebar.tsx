@@ -46,13 +46,14 @@ const Sidebar = () => {
           href="mailto: rahad.dev24@gmail.com"
           className="font-bold text-sm text-left w-full xl:text-base"
         >
-          Email: <span className="font-thin">rahad.dev24@gmail.com</span>
+          Email:{" "}
+          <span className="font-thin select-all">rahad.dev24@gmail.com</span>
         </Link>
         <Link
           href="tel:+8801319639009"
           className="text-left w-full font-bold text-sm xl:text-base"
         >
-          Phone: <span className="font-thin">+880 1319-639009</span>
+          Phone: <span className="font-thin select-all">+8801319639009</span>
         </Link>
 
         <address className="text-sm mb-6 text-left w-full xl:text-base">

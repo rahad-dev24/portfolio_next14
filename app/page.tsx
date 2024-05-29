@@ -42,7 +42,7 @@ export default function Home() {
           <Techs />
         </section>
         <section>
-          <ProjectCard className="md:w-full lg:w-5/6" />
+          <ProjectCard className="md:w-full " />
         </section>
         <section>
           <AboutCard className="mt-10 md:mt-24" />
