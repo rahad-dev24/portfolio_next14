@@ -12,7 +12,7 @@ const Pcards = ({
 }: {
   name: string;
   img: string;
-  live: string;
+  live?: string;
   desc?: string;
   imgAlt?: string;
   techStack?: string;
@@ -21,7 +21,7 @@ const Pcards = ({
   return (
     <div className="border border-gray-600 hover:border-gray-50 rounded p-2 cursor-default  ">
       <Link
-        href={live}
+        href={live ? live : "#"}
         rel="noopener noreferrer"
         target="_blank"
         className=" group"
@@ -29,14 +29,14 @@ const Pcards = ({
         <div className="relative mb-2 m-auto">
           <Image
             src={img}
-            alt={imgAlt}
+            alt={imgAlt ? imgAlt : name}
             width="700"
             height="700"
             className="bg-white w-[700px] h-[700px] group-hover:blur-sm
           rounded-md transition ease-in group-hover:opacity-30 m-auto "
           />
           <p className="absolute hidden group-hover:block   translate-y-[-50%] w-full h-full  text-center text-white">
-            {live}
+            {live ? live : null}
           </p>
         </div>
       </Link>

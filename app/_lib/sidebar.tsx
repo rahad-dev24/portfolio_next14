@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import LogoButton from "./logo-button";
+import Image from "next/image";
 import { links } from "@/public/links";
 import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/24/solid";
 
@@ -27,12 +28,12 @@ const Sidebar = () => {
           href="/"
           className="group my-4 border border-gray-50 hover:border-white rounded"
         >
-          <img
+          <Image
             src="/white.png"
             alt="logo"
             className="group-hover:hidden  p-1 h-auto w-40 cursor-default"
           />
-          <img
+          <Image
             src="/black.png"
             alt="logo"
             className="hidden group-hover:block group-hover:bg-white transition-all ease-in  p-1 h-auto w-40 cursor-default"

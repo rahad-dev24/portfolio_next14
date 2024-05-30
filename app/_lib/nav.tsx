@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Btn from "@/components/Btn";
 import Menu from "@/components/menu";
+import Image from "next/image";
 const Nav = () => {
   const button_css: string =
     "text-gray-400 hover:text-gray-50 hidden lg:block hover:text-black  ml-2 py-1 px-2 rounded border border-gray-600 hover:border-gray-50 bg-black";
@@ -9,14 +10,14 @@ const Nav = () => {
     <nav className="h-full">
       <ul className="flex flex-wrap content-center items-center h-full px-4">
         <Link href="/" className="group">
-          <img
+          <Image
             src="/white.png"
             alt="logo"
             height={"56"}
             width={"72"}
             className="group-hover:hidden rounded p-1"
           />
-          <img
+          <Image
             src="/black.png"
             alt="logo"
             height={"56"}

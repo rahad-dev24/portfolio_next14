@@ -20,7 +20,7 @@ export default function Home() {
             height="150"
           ></Image>
           <h1 className="text-3xl md:text-4xl font-bold pt-6 md:pt-10">
-            Hello, <span className="animate-pulse">I'm Rahad!</span>
+            Hello, <span className="animate-pulse">I&apos;m Rahad!</span>
           </h1>
           <h3 className="text-center  font-bold my-2">
             Full-Stack Developer | Nextjs Developer
