@@ -30,11 +30,15 @@ const Sidebar = () => {
         >
           <Image
             src="/white.png"
+            width={"160"}
+            height={"160"}
             alt="logo"
             className="group-hover:hidden  p-1 h-auto w-40 cursor-default"
           />
           <Image
             src="/black.png"
+            width={"160"}
+            height={"160"}
             alt="logo"
             className="hidden group-hover:block group-hover:bg-white transition-all ease-in  p-1 h-auto w-40 cursor-default"
           />
@@ -73,6 +77,7 @@ const Sidebar = () => {
             buttonText={index.buttonText}
             pathURL={index.pathURL}
             key={index.buttonText}
+            className="pl-8"
           />
         ))}
       </article>

@@ -30,9 +30,9 @@ const Pcards = ({
           <Image
             src={img}
             alt={imgAlt ? imgAlt : name}
-            width="700"
-            height="700"
-            className="bg-white w-[700px] h-[700px] group-hover:blur-sm
+            width="500"
+            height="500"
+            className="bg-white w-[500px] h-[500px] md:w-[700px] md:h-[700px] group-hover:blur-sm
           rounded-md transition ease-in group-hover:opacity-30 m-auto "
           />
           <p className="absolute hidden group-hover:block   translate-y-[-50%] w-full h-full  text-center text-white">
@@ -51,7 +51,9 @@ const Pcards = ({
         </p>
       ) : null}
       {techStack ? (
-        <p className="text-sm my-1">Tech Stack: {techStack}</p>
+        <p className="text-sm my-1">
+          <span className="font-bold"> Tech Stack: </span> {techStack}
+        </p>
       ) : null}
     </div>
   );

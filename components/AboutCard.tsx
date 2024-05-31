@@ -30,19 +30,24 @@ const edu: edu[] = [
     cgpa: "7.0 out of 9 (2022)",
   },
 ];
-
+const about = `Tech Stack:
+• HTML, CSS, JAVASCRIPT, TYPESCRIPT.
+• Node.js, Next.js, React, Tailwind CSS.
+• Apollo server, GraphQL, React Query.
+• PostgreSQL, Redis, Prisma, Sequelize,
+  Joi, Zod.
+• Docker, Docker Compose.`;
 const AboutCard = ({ className }: { className?: string }) => {
   return (
     <div className={`${className}`}>
       <h2 className="text-3xl font-bold text-center pb-10">About Me</h2>
-      <p className="lg:text-center text-justify pb-10">
-        Full-Stack developer with 2+ years of experience in web development with
-        Node.js, Next.js, Apollo server, React Query, PostgreSQL, GraphQL,
-        Tailwind CSS, TypeScript, Prisma ORM, Docker, Session authentication and
-        authorization, Redis and Nginx. I’ve done many projects and side
-        projects and made myself comfortable with large scale project
-        structures.
+      <p className=" text-justify p-1">
+        Full Stack developer with more then 2 years of experience in developing
+        web apps. Ranging from small to medium-sized interactive websites to
+        meet the expectations of the clients helping them to expand their
+        business.
       </p>
+      <pre className="text-justify pb-10 px-1">{about} </pre>
       <article className="grid grid-flow-row gap-4 grid-cols-4 xl:[&>*:nth-child(odd)]:col-span-2 xl:[&>*:nth-child(even)]:col-span-2 xl:[&>*:nth-last-child(1)]:col-span-4 xl:[&>*:nth-last-child(1)]:text-center">
         {edu.map((index) => {
           return (

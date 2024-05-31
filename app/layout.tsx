@@ -4,8 +4,8 @@ import Nav from "./_lib/nav";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Portfolio - Faisal Ahamed Rahad",
-  description: "Portfolio with Next.js 14 and Tailwind CSS",
+  title: "Rahad | Full-Stack Developer",
+  description: "Portfolio with Next.js and Tailwind CSS",
 };
 
 export default function RootLayout({

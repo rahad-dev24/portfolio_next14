@@ -1,21 +1,41 @@
 export const projects: projects[] = [
   {
-    name: "E-Commerce App(Frontend)",
+    name: "E-commerce Frontend (Development phase)",
     img: "/tomaato-store.svg",
     live: "https://tomaato-store.vercel.app/",
-    desc: "E-Commerce App with complete ERP System and store management",
+    desc: "E-Commerce App with GraphQL API",
     techStack:
-      "Nextjs, TypeGraphQL, React Query, TypeScript, Session based Auth.",
+      "Nextjs, Tailwind CSS, Shadcn UI, TypeGraphQL, React Query, TypeScript, Session based Auth.",
     imgAlt: "",
   },
   {
-    name: "E-Commerce App(Backend)",
+    name: "E-commerce Backend",
     img: "/graphql.svg",
-    live: "",
-    desc: "E-Commerce App with complete ERP System and store management",
+    live: "Contact for code review",
+    desc: "E-Commerce Backend with complete ERP System and store management",
     techStack:
       "Nodejs, Apollo server, GraphQL, PostgreSQL, Prisma, TypeScript, Session based Auth.",
     imgAlt: "",
+  },
+  {
+    name: "ERP System Frontend (Development phase)",
+    img: "/graphql.svg",
+    live: "Development phase",
+    desc: "Frontend based on the ERP System backend for management of all sister concerns and stores, streamlining and simplifying the process of management",
+    techStack: "Next.js, TypeScript, Tailwind CSS, Shadcn/ui.",
+    imgAlt: "",
+    github: "",
+  },
+
+  {
+    name: "Result Processing and Management with student administration System",
+    img: "/expressjs-icon.svg",
+    live: "Contact for code review",
+    desc: "An automated system for processing, publishing and archiving results for University as well as student administration system",
+    techStack:
+      "Nodejs, Express, Pug, CSS, Javascript, Sequelize ORM, PostgreSQL, Redis, Bcrypt, Passportjs.",
+    imgAlt: "",
+    github: "",
   },
 ];
 

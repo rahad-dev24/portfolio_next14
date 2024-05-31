@@ -3,7 +3,7 @@
 - A portfolio website for Faisal Ahamed Rahad. To showcase my skills and projects.
 - Built with [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/).
 - Hosted on [Vercel](https://vercel.com/).
-- [Source code](https://github.com/faisalrahad/portfolio_next14).
+- [Source code](https://github.com/rahad-dev24/portfolio_next14).
 - [Live demo](https://portfolio-rahad.vercel.app/).
 
 

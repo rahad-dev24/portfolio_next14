@@ -29,14 +29,14 @@ const LogoButton = ({
         alt={imageAlt}
         width="30"
         height="30"
-        className="ml-[25%] hidden group-hover:block animate-wiggle"
+        className="hidden group-hover:block animate-wiggle"
       />
       <Image
         src={imageSrcWhite}
         alt={imageAlt}
         width="30"
         height="30"
-        className="ml-[25%] group-hover:hidden"
+        className=" group-hover:hidden"
       />
       <p className="pl-2 border-l">{buttonText}</p>
     </Link>
