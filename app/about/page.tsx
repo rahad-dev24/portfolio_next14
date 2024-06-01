@@ -6,7 +6,7 @@ import { links } from "@/public/links";
 const Page = () => {
   return (
     <>
-      <AboutCard className="px-2 py-8 md:w-[70%] lg:w-[60%] m-auto md:mt-8" />
+      <AboutCard className="px-2 py-8 md:w-[70%] lg:w-[60%] m-auto md:mt-8 lg:mb-28" />
       <section className="px-2 py-8 md:w-[80%] lg:w-[70%] m-auto flex flex-col justify-center items-center ">
         <h2 className="text-3xl font-bold my-8">Contact Me</h2>
         <section className="flex flex-col gap-3 m-auto w-full ">

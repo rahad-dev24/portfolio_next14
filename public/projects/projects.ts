@@ -11,8 +11,8 @@ export const projects: projects[] = [
   {
     name: "E-commerce Backend",
     img: "/graphql.svg",
-    live: "Contact for code review",
-    desc: "E-Commerce Backend with complete ERP System and store management",
+    code: "Contact for code review",
+    desc: "E-Commerce Backend with complete ERP System and store management.",
     techStack:
       "Nodejs, Apollo server, GraphQL, PostgreSQL, Prisma, TypeScript, Session based Auth.",
     imgAlt: "",
@@ -20,7 +20,7 @@ export const projects: projects[] = [
   {
     name: "ERP System Frontend (Development phase)",
     img: "/graphql.svg",
-    live: "Development phase",
+    code: "Development phase",
     desc: "Frontend based on the ERP System backend for management of all sister concerns and stores, streamlining and simplifying the process of management",
     techStack: "Next.js, TypeScript, Tailwind CSS, Shadcn/ui.",
     imgAlt: "",
@@ -30,7 +30,7 @@ export const projects: projects[] = [
   {
     name: "Result Processing and Management with student administration System",
     img: "/expressjs-icon.svg",
-    live: "Contact for code review",
+    code: "Contact for code review",
     desc: "An automated system for processing, publishing and archiving results for University as well as student administration system",
     techStack:
       "Nodejs, Express, Pug, CSS, Javascript, Sequelize ORM, PostgreSQL, Redis, Bcrypt, Passportjs.",
@@ -43,6 +43,7 @@ type projects = {
   name: string;
   img: string;
   live?: string;
+  code?: string;
   desc?: string;
   github?: string;
   techStack?: string;

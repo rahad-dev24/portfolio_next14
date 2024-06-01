@@ -5,6 +5,7 @@ const Pcards = ({
   name,
   img,
   live,
+  code,
   desc,
   imgAlt,
   techStack,
@@ -13,6 +14,7 @@ const Pcards = ({
   name: string;
   img: string;
   live?: string;
+  code?: string;
   desc?: string;
   imgAlt?: string;
   techStack?: string;
@@ -32,11 +34,11 @@ const Pcards = ({
             alt={imgAlt ? imgAlt : name}
             width="500"
             height="500"
-            className="bg-white w-[500px] h-[500px] md:w-[700px] md:h-[700px] group-hover:blur-sm
+            className="bg-black w-[500px] h-[500px] group-hover:blur-sm
           rounded-md transition ease-in group-hover:opacity-30 m-auto "
           />
           <p className="absolute hidden group-hover:block   translate-y-[-50%] w-full h-full  text-center text-white">
-            {live ? live : null}
+            {live ? live : code}
           </p>
         </div>
       </Link>
@@ -60,11 +62,9 @@ const Pcards = ({
 };
 const ProjectCard = ({ className }: { className?: string }) => {
   return (
-    <div
-      className={`md:w-[80%]  m-auto overflow-hidden px-0.5 py-8 ${className}`}
-    >
+    <div className={`w-full m-auto overflow-hidden px-0.5 py-8 ${className}`}>
       <h2 className="text-3xl font-bold mb-8 text-center ">Projects</h2>
-      <article className="grid grid-flow-row gap-4 ">
+      <article className="grid grid-flow-row gap-16 ">
         {projects.map((index) => {
           return (
             <section key={index.name}>
@@ -76,6 +76,7 @@ const ProjectCard = ({ className }: { className?: string }) => {
                 imgAlt={index.imgAlt}
                 techStack={index.techStack}
                 github={index.github}
+                code={index.code}
               />
             </section>
           );

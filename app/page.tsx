@@ -44,7 +44,7 @@ export default function Home() {
           </section>{" "}
           <Techs />
         </section>
-        <section>
+        <section className="md:w-3/4 lg:w-full xl:w-3/4 m-auto">
           <ProjectCard className="md:w-full " />
         </section>
       </article>

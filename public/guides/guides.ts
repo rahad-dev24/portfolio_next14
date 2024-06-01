@@ -295,4 +295,145 @@ You can easily use this volume for later as is saver all the databases.
 	
 `,
   },
+  {
+    name: "Change default Bash Shell to Zsh",
+    manual: `		
+	chsh -s $(which zsh)
+
+	source ~/.zshrc
+
+	echo $SHELL`,
+  },
+  {
+    name: "Prisma ORM",
+    manual: `
+
+///Install Prisma///
+
+	npm install prisma --save-dev
+
+///Init Prisma///
+
+	npx prisma init --datasource-provider <eg. postgresql, mysql, sqlite, mongodb>
+
+
+///.env///
+
+Hosted locally
+
+	DATABASE_URL="postgresql://<username>:<password>@localhost:5432/<database name>?schema=public"
+
+URL provided by your database/hosting provider
+
+	DATABASE_URL="<URL>"
+
+
+///model your data///
+The Prisma schema provides an intuitive way to model data. Add the following models to your schema.prisma file:
+
+prisma/schema.prisma file
+
+	model Post {
+	  id        Int      @id @default(autoincrement())
+	  createdAt DateTime @default(now())
+	  updatedAt DateTime @updatedAt
+	  title     String   @db.VarChar(255)
+	  content   String?
+	  published Boolean  @default(false)
+	  author    User     @relation(fields: [authorId], references: [id])
+	  authorId  Int
+	}
+
+	model Profile {
+	  id     Int     @id @default(autoincrement())
+	  bio    String?
+	  user   User    @relation(fields: [userId], references: [id])
+	  userId Int     @unique
+	}
+
+	model User {
+	  id      Int      @id @default(autoincrement())
+	  email   String   @unique
+	  name    String?
+	  posts   Post[]
+	  profile Profile?
+	}
+
+
+///create database tables///
+
+Run a migration to create your database tables with Prisma Migrate
+
+	npx prisma migrate dev --name init
+
+This command did three things:
+
+- It created a new SQL migration file for this migration in the prisma/migrations directory.
+- It executed the SQL migration file against the database.
+- It ran prisma generate under the hood (which installed the @prisma/client package and generated 
+	a tailored Prisma Client API based on your models).
+
+For Sqlite3
+
+- Because the SQLite database file didn't exist before, the command also created it inside the prisma 
+	directory with the name dev.db as defined via the environment variable in the .env file.
+
+***Whenever you update your Prisma schema, you will have to update your database schema using
+	either prisma migrate dev or prisma db push. This will keep your database schema in sync
+	with your Prisma schema. The commands will also regenerate Prisma Client.
+
+///Prisma client///
+
+The install command invokes prisma generate for you which reads your Prisma schema and generates
+a version of Prisma Client that is tailored to your models.
+
+	npm install @prisma/client
+
+	npx prisma generate
+
+///Connecting to DB///
+
+db.ts
+
+
+	import { PrismaClient } from '@prisma/client'
+
+	const prismaClientSingleton = () => {
+	  return new PrismaClient()
+	}
+
+	declare const globalThis: {
+	  prismaGlobal: ReturnType<typeof prismaClientSingleton>;
+	} & typeof global;
+
+	const prisma = globalThis.prismaGlobal ?? prismaClientSingleton()
+
+	export default prisma
+
+	if (process.env.NODE_ENV !== 'production') globalThis.prismaGlobal = prisma
+
+
+
+After creating this file, you can now import the PrismaClient instance 
+anywhere in your Next.js pages as follows:
+
+// e.g. in \`pages/index.tsx\`
+	import prisma from './db'
+
+	export const getServerSideProps = async () => {
+	  const posts = await prisma.post.findMany()
+
+	  return { props: { posts } }
+	}
+
+
+///For more///
+
+	https://www.prisma.io/docs
+
+  https://www.prisma.io/docs/guides
+
+
+`,
+  },
 ];

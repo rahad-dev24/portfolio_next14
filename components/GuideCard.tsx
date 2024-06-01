@@ -1,4 +1,4 @@
-import { guides } from "@/public/guides";
+import { guides } from "@/public/guides/guides";
 
 const GuideCard = ({
   className,
