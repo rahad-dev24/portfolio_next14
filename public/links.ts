@@ -25,6 +25,6 @@ export const links = [
     imageSrcWhite: "/download-white.svg",
     imageAlt: "download",
     buttonText: "Download CV",
-    pathURL: "/CV-Faisal_Ahamed_Rahad.pdf",
+    pathURL: "/CV Faisal Ahamed Rahad.pdf",
   },
 ];

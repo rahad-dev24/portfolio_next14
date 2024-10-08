@@ -12,7 +12,7 @@ const Sidebar = () => {
     <ChevronRightIcon
       onClick={() => srtOpenSideBar(!openSideBar)}
       className={
-        `hidden lg:block w-8 h-8 m-4 border rounded fixed cursor-default border-gray-400 hover:border-gray-50 text-gray-400 hover:text-gray-50 animate-pulse ` +
+        `hidden lg:block w-8 h-8 m-4 border rounded fixed cursor-default border-green-500 hover:border-gray-50 text-green-500 hover:text-gray-50 animate-pulse ` +
         (openSideBar ? "hidden" : "block")
       }
     />

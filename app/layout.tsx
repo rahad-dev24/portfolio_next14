@@ -25,7 +25,10 @@ export default function RootLayout({
         {children}
         <footer className="backdrop-blur backdrop-contrast-125 sticky top-0 h-14 border-t p-1.5 flex flex-row items-center justify-end pr-8">
           <p>
-            © 2024 <span className="animate-pulse">Faisal Ahamed Rahad</span>
+            © 2024{" "}
+            <span className="animate-pulse text-green-500">
+              Faisal Ahamed Rahad
+            </span>
           </p>
         </footer>
       </body>

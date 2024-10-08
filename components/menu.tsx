@@ -10,16 +10,16 @@ const Menu = () => {
     " hover:text-black hover:bg-white border-0 w-full p-5 bg-black  ";
   return (
     <div
-      className=" lg:hidden"
+      className=" lg:hidden text-green-500 "
       onClick={() => {
         setOpen(!open);
       }}
     >
       {open ? (
-        <Bars3Icon className="w-8 h-8 border rounded " />
+        <Bars3Icon className="w-8 h-8 border rounded border-green-500 " />
       ) : (
         <div>
-          <XMarkIcon className="w-8 h-8 border rounded relative" />
+          <XMarkIcon className="w-8 h-8 border rounded relative border-green-500" />
           <div
             className="
               flex
@@ -46,7 +46,7 @@ const Menu = () => {
             />
             <Btn
               pathURL="/about"
-              button_text="About"
+              button_text="About Me"
               className={menu_list_css + " rounded-b "}
             />
           </div>

@@ -32,22 +32,24 @@ const edu: edu[] = [
 ];
 const about = `Tech Stack:
 • HTML, CSS, JAVASCRIPT, TYPESCRIPT.
-• Node.js, Next.js, React, Tailwind CSS.
+• Node.js, Next.js, Tailwind CSS, shadcn/ui, Material UI.
 • Apollo server, GraphQL, React Query.
 • PostgreSQL, Redis, Prisma, Sequelize,
   Joi, Zod.
-• Docker, Docker Compose.`;
+• Docker, Docker Compose, NGINX, PM2.
+• Git, Github.
+• GCP, Vercel, Digital Ocean, Namecheap.`;
 const AboutCard = ({ className }: { className?: string }) => {
   return (
     <div className={`${className}`}>
       <h2 className="text-3xl font-bold text-center pb-10">About Me</h2>
       <p className=" text-justify p-1">
-        Full Stack developer with more then 2 years of experience in developing
-        web apps. Ranging from small to medium-sized interactive websites to
-        meet the expectations of the clients helping them to expand their
-        business.
+        A Full Stack developer with more then 2 years of experience in
+        developing web apps. Ranging from small to medium-sized interactive
+        websites to meet the expectations of the clients helping them to expand
+        their business.
       </p>
-      <pre className="text-justify pb-10 px-1">{about} </pre>
+      <pre className="text-justify pb-10 px-1 text-green-500">{about} </pre>
       <article className="grid grid-flow-row gap-4 grid-cols-4 xl:[&>*:nth-child(odd)]:col-span-2 xl:[&>*:nth-child(even)]:col-span-2 xl:[&>*:nth-last-child(1)]:col-span-4 xl:[&>*:nth-last-child(1)]:text-center">
         {edu.map((index) => {
           return (

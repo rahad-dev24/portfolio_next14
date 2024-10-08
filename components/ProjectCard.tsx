@@ -21,7 +21,7 @@ const Pcards = ({
   github?: string;
 }) => {
   return (
-    <div className="border border-gray-600 hover:border-gray-50 rounded p-2 cursor-default  ">
+    <div className="border border-gray-600 hover:border-green-500 rounded p-4 cursor-default  ">
       <Link
         href={live ? live : "#"}
         rel="noopener noreferrer"

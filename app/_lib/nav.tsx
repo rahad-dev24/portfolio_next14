@@ -9,7 +9,7 @@ const Nav = () => {
   return (
     <nav className="h-full">
       <ul className="flex flex-wrap content-center items-center h-full px-4">
-        <Link href="/" className="group">
+        <Link href="/" className="flex items-center group mr-auto">
           <Image
             src="/white.png"
             alt="logo"
@@ -24,19 +24,23 @@ const Nav = () => {
             width={"72"}
             className="hidden group-hover:block group-hover:bg-white transition-all ease-in rounded p-1"
           />
+          {/* <li className="text-2xl font-mono text-green-500"> */}
+          {/*   Rahad */}
+          {/*   <p className="w-3 h-[1.2rem] mt-[0.35rem] md:mt-[0.25rem]  ml-[2px] float-right animate-pulse bg-white "></p> */}
+          {/* </li> */}
         </Link>
 
-        <li className="text-2xl mr-auto ">
-          Rahad{" "}
-          <p className="w-3 h-[1.2rem] mt-[0.35rem] md:mt-[0.25rem]  ml-[2px] bg-white float-right animate-pulse "></p>
-        </li>
         <Btn
           pathURL="/projects"
           button_text="Projects"
           className={button_css}
         />
         <Btn pathURL="/guides" button_text="Guides" className={button_css} />
-        <Btn pathURL="/about" button_text="About" className={button_css} />
+        <Btn
+          pathURL="/about"
+          button_text="About Me"
+          className={button_css + " text-green-500"}
+        />
         <Menu />
       </ul>
     </nav>
