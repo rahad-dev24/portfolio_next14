@@ -13,11 +13,11 @@ export default function Home() {
       <article className="p-4 grid grid-flow-row md:w-[85%] lg:w-[65%] m-auto">
         <section className="  min-h-screen text-center overflow-hidden pt-4 md:pt-10  ">
           <Image
-            className="text-center m-auto  bg-white rounded-full p-3"
-            src={"/user.svg"}
+            className="text-center m-auto  bg-white rounded-full p-0.5"
+            src={"/profilePicture.png"}
             alt="logo"
-            width="150"
-            height="150"
+            width="180"
+            height="200"
           ></Image>
           <h1 className="text-3xl md:text-4xl font-bold pt-4 md:pt-10">
             Hello, <span className="animate-pulse">I&apos;m Rahad!</span>
@@ -31,7 +31,8 @@ export default function Home() {
             TypeScript. Currently I am looking for a full time job as a
             full-stack developer or a backend developer in a reputable company.
             I am willing to learn new technologies, improve my skills
-            consistently and work under pressure to meet company requirements.{" "}
+            consistently and work under pressure to meet company
+            requirements.{" "}
           </p>
           <p className="pt-4 md:py-4 text-center">
             Explore my portfolio and see some of my projects.
